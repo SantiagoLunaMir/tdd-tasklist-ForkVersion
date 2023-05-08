@@ -1,5 +1,7 @@
 package edu.uaslp.objetos.taskslist;
 
+import edu.uaslp.objetos.taskslist.exceptions.TaskNotFoundException;
+
 import java.time.LocalDateTime;
 import java.util.*;
 
@@ -17,7 +19,7 @@ public class TaskList{
     public void remove(Task task){
         taskList.remove(task);
     }
-    public Task find(String title) throws TaskNotFoundException{
+    public Task find(String title) throws TaskNotFoundException {
         for(Task task:taskList){
             if(task.getTitle().equals(title)){
                 return task;

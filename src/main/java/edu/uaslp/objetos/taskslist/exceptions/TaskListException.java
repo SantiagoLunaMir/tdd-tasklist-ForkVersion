@@ -1,4 +1,4 @@
-package edu.uaslp.objetos.taskslist;
+package edu.uaslp.objetos.taskslist.exceptions;
 
 public class TaskListException extends RuntimeException{
     TaskListException(){

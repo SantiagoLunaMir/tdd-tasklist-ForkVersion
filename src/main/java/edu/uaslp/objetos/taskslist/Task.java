@@ -1,8 +1,9 @@
 package edu.uaslp.objetos.taskslist;
 
+import edu.uaslp.objetos.taskslist.exceptions.TaskListException;
+
 import java.time.LocalDateTime;
-import java.util.Date;
-import java.lang.Throwable;
+
 class Task {
 
     private String title;
@@ -38,7 +39,7 @@ class Task {
         return dueDate;
     }
 
-    public void setDueDate(LocalDateTime dueDate) throws TaskListException{
+    public void setDueDate(LocalDateTime dueDate) throws TaskListException {
         LocalDateTime now=LocalDateTime.now();//fecha actual
         if(dueDate.isBefore(now)){
             throw new TaskListException();
